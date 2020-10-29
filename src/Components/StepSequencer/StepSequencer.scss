@@ -1,0 +1,43 @@
+.ss__track {
+    display: grid;
+    grid-template-columns: 10% repeat(24, 1fr);
+}
+
+.ss__track__title {
+    border: 1px solid black;
+    background-color: #33383c;
+
+    span {
+        @include reset-block;
+        margin: .3rem;
+        width: calc(100% - .6rem);
+        height: calc(100% - .6rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 0.7rem;
+        color: #8d8e93;
+        border-radius: 5px;
+        background-color: #25282f;
+
+    }
+}
+
+.ss__track__step {
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    background-color: #33383c;
+
+    &:nth-child(4n+2) {
+        background-color: #3d464d;
+    }
+
+    &--active {
+        background-color: #6792c7;
+    }
+}

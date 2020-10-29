@@ -1,0 +1,36 @@
+@mixin reset-block {
+  margin: 0;
+  padding: 0;
+  display: block;
+  list-style: none;
+  border: 0 none;
+}
+
+@mixin reset-button {
+  @include reset-block();
+  background-color: transparent;
+  font: inherit;
+  font-size: inherit;
+}
+
+html, body {
+  background-color: #343434;
+  font-size: 1rem;
+}
+
+.App {
+  @include reset-block;
+  padding: 2rem;
+  color: white;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include reset-block;
+  font-size: inherit;
+  font-weight: normal;
+}
+
+@import './Assets/Styles/Box.scss';
+@import './Components/Grid/Grid.scss';
+
+@import './Components/StepSequencer/StepSequencer.scss';
